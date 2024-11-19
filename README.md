@@ -22,3 +22,5 @@
 Не баги, а фичи:
 
 Если не выбрать тип самолета в этих действиях: добавить, изменить, удалить, то вылезит ошибка, которая заспамит вам.
+![image](https://github.com/user-attachments/assets/452a228c-ad05-4442-a2ae-3f204804d932)
+![image](https://github.com/user-attachments/assets/4fc6a4f1-9c7d-4c6a-a968-d1db22f7ef13)
