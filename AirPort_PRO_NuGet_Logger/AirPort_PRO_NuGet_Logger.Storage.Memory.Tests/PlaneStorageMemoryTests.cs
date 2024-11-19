@@ -2,8 +2,6 @@
 using AirPort_PRO_NuGet_Logger.Contracts.Models;
 using DataGridAirPort.Storage.Memory;
 using FluentAssertions;
-using Microsoft.Extensions.Logging;
-using Moq;
 using System;
 using System.Linq;
 using System.Threading.Tasks;

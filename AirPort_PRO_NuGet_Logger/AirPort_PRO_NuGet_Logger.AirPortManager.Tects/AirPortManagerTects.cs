@@ -21,22 +21,17 @@ namespace AirPort_PRO_NuGet_Logger.AirPortManager.Tects
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="PlaneManager_csTest"/>.
         /// </summary>
-        // Конструктор класса тестирования для PlaneManager
         public PlaneManager_csTest()
         {
-            // Создание мок-объекта для интерфейса IAirPortStorage
             airPortStorageMock = new Mock<IAirPortStorage>();
-            // Создание мок-объекта для интерфейса ILogger
             loggerMock = new Mock<ILogger>();
 
-            // Настройка мок-объекта loggerMock для обработки вызова метода Log
             loggerMock.Setup(x => x.Log(LogLevel.Information,
-                It.IsAny<EventId>(), // Игнорируем конкретный EventId
-                It.IsAny<It.IsAnyType>(), // Игнорируем тип данных, передаваемый в качестве сообщения
-                null, // Игнорируем переданную Exception (если есть), будет null
-                It.IsAny<Func<It.IsAnyType, Exception, string>>()));  // Игнорируем функцию форматирования сообщения
+                It.IsAny<EventId>(),
+                It.IsAny<It.IsAnyType>(),
+                null,
+                It.IsAny<Func<It.IsAnyType, Exception, string>>())); 
 
-            // Инициализация экземпляра airPortManager с использованием мок-объектов для IAirPortStorage и ILogger
             airPortManager = new PlaneManager_cs(airPortStorageMock.Object, loggerMock.Object);
         }
 
